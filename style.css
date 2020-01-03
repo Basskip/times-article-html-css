@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    height: 42px;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid lightgray;
+    background: white;
+    
+}
+
+#navcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    height: inherit;
+    margin: auto;
+    box-sizing: content-box;
+}
+
+#navcontainer > * {
+    flex-grow: 1;
+}
+
+#left {
+    display: inline-block;
+}
+
+#left > button {
+    background-color: white;
+    border: none;
+    color: black;
+    margin-right: 10px;
+
+}
+
+#left > button:hover {
+    background-color: gray;
+}
+
+#section {
+    font-size: 14.25px;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    line-height: 19px;
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-family: nyt-cheltenham;
+    font-size: 40px;
+    font-style: italic;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    min-width: 1000;
+    margin: 0 100px;
+}
+
+article > * {
+    grid-column: 2 / -2;
+}
+
+p {
+    font-size: 20px;
+    font-family: nyt-imperial;
+}
+
+.imagewrapper {
+    grid-column: 1 / -1;
+}
+
+figcaption {
+    font-size: 15px;
+    font-family: nyt-imperial;
+    color: #666;
+}
+
+.credit {
+    font-size: 13px;
+    color: #888;
+}
+
+#preamble {
+    font-family: nyt-franklin;
+}
+
+#preamble .author {
+    color: #333;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#preamble .author a {
+    color: #333;
+}
+
+#preamble .date {
+    font-size: 13px;
+}
