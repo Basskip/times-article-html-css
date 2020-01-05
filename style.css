@@ -6,6 +6,8 @@ body {
     margin: 0;
 }
 
+/* Everything Navbar */
+
 nav {
     height: 42px;
     width: 100%;
@@ -26,11 +28,17 @@ nav {
 }
 
 #navcontainer > * {
-    flex-grow: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
-#left {
-    display: inline-block;
+#right {
+    justify-content: flex-end;
+}
+
+#center {
+    justify-content: center;
 }
 
 #left > button {
@@ -38,11 +46,39 @@ nav {
     border: none;
     color: black;
     margin-right: 10px;
-
 }
 
 #left > button:hover {
     background-color: gray;
+}
+
+button {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+}
+
+#subscribe {
+    padding: 0 10px;
+    margin-right: 15px;
+    height: 33px;
+    line-height: 33px;
+}
+
+.bluebtn {
+    background-color: rgb(86, 123, 149);
+    border: 1px solid rgb(50, 104, 145);
+    border-radius: 3px;
+    color: white;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+#account-btn {
+    background: none;
+    border: none;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 #section {
@@ -55,9 +91,7 @@ nav {
     display: inline-block;
 }
 
-img {
-    width: 100%;
-}
+/* Article */
 
 h1 {
     font-family: nyt-cheltenham;
@@ -67,9 +101,10 @@ h1 {
 
 article {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    min-width: 1000;
-    margin: 0 100px;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 1200px;
+    padding-top: 30px;
+    margin: 0 auto 0 auto;
 }
 
 article > * {
@@ -78,11 +113,19 @@ article > * {
 
 p {
     font-size: 20px;
+    line-height: 30px;
     font-family: nyt-imperial;
 }
 
+
+
 .imagewrapper {
     grid-column: 1 / -1;
+}
+
+.imagewrapper > img {
+    max-width: 100%;
+    height: auto;
 }
 
 figcaption {
@@ -112,4 +155,343 @@ figcaption {
 
 #preamble .date {
     font-size: 13px;
+    font-weight: 500;
+    float: left;
+}
+
+#socials {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+#socials > * {
+    margin-right: 10px;
+}
+
+button.round {
+    border-radius: 100%;
+    background-color: #eee;
+    border: 1px #eee solid;
+    width: 30px;
+    height: 30px;
+}
+
+.comment-count {
+    font-size: 0.7em;
+    margin-top: -2px;
+    margin-left: -4px;
+}
+
+.notice {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: center;
+}
+
+.notice a {
+    color: rgb(50, 104, 145);
+    text-decoration: none;
+}
+
+hr {
+    width: 10%;
+}
+
+/* Tips */
+
+.tip {
+    width: 210px;
+}
+
+.tip-right {
+    grid-column: -2 / -1;
+    justify-self: end;
+}
+
+.tip-img {
+    width: 75px;
+    height: auto;
+    vertical-align: middle;
+}
+.tip-title {
+    border-bottom: 1px solid rgb(226,226,226);
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.pick {
+    margin-bottom: 10px;
+}
+
+.pick > a {
+    display: inline-block;
+    width: calc(100% - 85px);
+    text-decoration: none;
+    color: rgb(51,51,51);
+    font-family: nyt-cheltenham-small, georgia, "times new roman";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    vertical-align: middle;
+}
+
+.pick > a:hover {
+    text-decoration: underline;
+}
+
+/* Grid section */
+
+.spanning {
+    grid-column: 1 / -1;
+    font-family: nyt-cheltenham,georgia,times new roman,times,serif;
+    width: 945px;
+    margin: 0 auto 0 auto;
+}
+
+.spanning > h2 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.spanning > p {
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 14px;
+    color: #666;
+    margin: 0;
+}
+
+#grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 135px 150px 135px 150px;
+    background-image: url("https://static01.nyt.com/newsgraphics/2014/03/18/theory-of-inflation/1ebaa1b972edda0f407fbaa0e010f6b50fb6792e/inflation-945.png");
+    background-size: cover;
+}
+
+.item {
+    padding-right: 5px;
+}
+
+.item > p {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.row2 {
+    grid-row: 2;
+}
+
+.row4 {
+    grid-row: 4;
+}
+
+/* Below the article */
+
+#articlecredit {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgb(102,102,102);
+    margin-bottom: 20px;
+}
+
+#comments {
+    width: 330px;
+    height: 36px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+#articlefoot {
+    margin-bottom: 50px;
+}
+
+/* Grid Footer */
+
+#grid-footer {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "a c"
+        "b c";
+    margin: 0 auto 0 auto;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.foot-title {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    margin: 10px 0 10px 0;
+}
+
+.footitem {
+    width: 100%;
+}
+
+.footitem > .credit {
+    text-align: right;
+    font-size: 12px;
+}
+
+.footitem > img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footitem > span {
+    font-family: nyt-cheltenham,georgia,times new roman,times,serif;
+    font-size: 18px;
+}
+
+.footitem > .date {
+    display: block;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(153,153,153);
+}
+
+#more {
+    grid-area: a;
+    border-top: 1px solid black;
+}
+
+#more-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#picks {
+    grid-area: b;
+    border-top: 1px solid black; 
+}
+
+#picks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#popular {
+    grid-area: c;
+    border-top: 1px solid black;
+}
+
+#popular > ul {
+    list-style: none;
+    padding: 0;
+}
+
+#popular > ul > li {
+    border-top: 1px solid lightgray;
+    font-family: nyt-cheltenham,georgia,times new roman,times,serif;
+    font-size: 19px;
+    padding: 10px 0 10px 0;
+}
+
+#double-break {
+    
+    width: 100%;
+}
+
+/* Dense footer */
+
+footer {
+    grid-column: 1 / -1;
+    border-top: medium double lightgray;
+    padding-top: 5px;
+    margin-top: 15px;
+}
+
+#dense-foot-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    border-bottom: 1px solid lightgray;
+}
+
+.column {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.column > h3 {
+    font-size: 13px;
+    color: rgb(51,51,51);
+    line-height: 15px;
+    font-weight: 700;
+}
+
+.column > ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+.column > ul > li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.subs-icon {
+    display: inline-block;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#sub-column {
+    border-left: 1px solid lightgray;
+    padding-left: 10px;
+}
+
+#special {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+#sub-column > :nth-child(4) {
+    padding-top: 10px;
+    border-top: 1px solid lightgray;
+}
+
+/* Copyright */
+#copyright > ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+}
+
+#copyright > ul > li {
+    display: inline;
+    font-size: 11px;
+    color: rgb(102,102,102);
+    margin-right: 10px;
+}
+
+#copyright > ul > li:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
